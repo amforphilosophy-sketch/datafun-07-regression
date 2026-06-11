@@ -211,6 +211,47 @@ Update these figures to present interesting results from your custom project:
 ![Provide a Useful Caption](./docs/images/Figure_3.png)
 
 ![Provide a Useful Caption](./docs/images/Figure_4.png)
+## Custom Project
+### Custom Question
+
+For my custom project, I explored this question:
+
+Is there a clear linear relationship between GDP and CO2 emissions in the OWID CO2 data subset?
+
+### Commands Used
+
+I ran the CO2 regression example with this command:
+
+```shell
+uv run python -m datafun.app_co2_case
+```
+
+I also reviewed the project log summary with this command:
+
+```shell
+grep -A 12 "SUMMARY" project.log
+```
+
+### Process
+
+I used the provided CO2/world data example as the new problem for Phase 5. The project loaded the `owid-co2-data-subset` dataset and used GDP as the feature variable and CO2 emissions as the target variable. The original dataset had 350 rows, and the modeling view used 308 rows after rows with missing required values were removed.
+
+The regression model created this fitted line:
+
+```text
+co2 = 3.21582e-10 * gdp + 308.446
+```
+
+### Custom Results
+
+The CO2 regression example completed successfully. However, the relationship between GDP and CO2 emissions was not as clear as the penguins example. The penguins example showed a stronger and more direct relationship between flipper length and body mass. In the CO2 example, the fitted line may not describe the data as well because countries differ in many ways, including population size, industrial activity, energy sources, year, and economic structure.
+
+This means GDP alone may not be enough to explain CO2 emissions with a simple straight-line model. A better analysis might consider additional variables such as year, population, CO2 per capita, region, or energy type.
+
+### Reflection
+
+I chose a smaller custom project because the new problem was already provided in the project. My goal was to run the CO2 regression example carefully, inspect the output, and explain why the linear relationship was less clear than the penguins example. This was enough for Phase 5 because I practiced running a regression model, reading the fitted line, comparing examples, and thinking about whether a straight-line model is appropriate.
+
 
 ## Project Documentation
 
