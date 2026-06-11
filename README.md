@@ -5,6 +5,17 @@
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
 > Professional Python project: linear regression and predictive analytics.
+>
+> ## Author
+
+Ahmad Saleem Mohmand
+
+GitHub: [amforphilosophy-sketch](https://github.com/amforphilosophy-sketch)
+
+Repository: [datafun-07-regression](https://github.com/amforphilosophy-sketch/datafun-07-regression)
+
+Documentation: [GitHub Pages Site](https://amforphilosophy-sketch.github.io/datafun-07-regression/)
+
 
 ## Project Goal
 
@@ -76,8 +87,10 @@ After you get a copy of this repo in your own GitHub account,
 open a machine terminal in your `Repos` folder:
 
 ```shell
-# Replace username with YOUR GitHub username.
-git clone https://github.com/username/datafun-07-regression
+# Clone Ahmad Saleem Mohmand's Module 7 repository.
+
+git clone https://github.com/amforphilosophy-sketch/datafun-07-regression.git
+
 
 cd datafun-07-regression
 code .
