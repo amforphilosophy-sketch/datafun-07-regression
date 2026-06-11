@@ -22,3 +22,37 @@ to get these projects running on your machine.
 The API page is not always easy to read at first,
 but it becomes useful as you get more comfortable with project structure,
 modules, functions, and docstrings.
+
+## Custom Project
+
+### Basis
+
+This project started with the provided Module 7 regression examples. The penguins example demonstrated a relatively clear linear regression relationship between flipper length and body mass. The CO2/world data example used the `owid-co2-data-subset` dataset to explore whether GDP can be used to predict CO2 emissions. For my custom project, I focused on the CO2 example because the assignment explained that the new problem was already included and needed to be explored and explained carefully.
+
+### Phase 4 Modifications
+
+For Phase 4, I made a small technical modification to the penguins regression workflow in `src/datafun/app_penguins_case.py`. I added a custom log message near the start of the `main()` function:
+
+CUSTOM MODIFICATION: Ahmad Saleem Mohmand reviewed and modified the penguins regression workflow.
+
+I chose this change because it was small, safe, and easy to verify. After running the script again, the custom message appeared in the terminal output and in `project.log`. The project still completed successfully, which showed that my modification did not break the workflow.
+
+### Phase 5 Custom Project
+
+For Phase 5, I explored the CO2 regression example using the `owid-co2-data-subset` dataset. The custom question I focused on was whether there is a clear linear relationship between GDP and CO2 emissions.
+
+I ran the CO2 example with this command:
+
+`uv run python -m datafun.app_co2_case`
+
+I also reviewed the log summary with this command:
+
+`grep -A 12 "SUMMARY" project.log`
+
+The project used GDP as the feature variable and CO2 emissions as the target variable. The original dataset had 350 rows, and the model used 308 rows after removing rows with missing required values. The fitted line was:
+
+`co2 = 3.21582e-10 * gdp + 308.446`
+
+The CO2 regression example completed successfully, but the relationship was not as simple to interpret as the penguins example. GDP alone may not fully explain CO2 emissions because countries differ in population size, industrial activity, energy sources, year, and economic structure. A better future analysis could compare CO2 with population, CO2 per capita, year, region, or energy type.
+
+This project helped me practice running a regression workflow, reading the project log, interpreting a fitted line, comparing model results, and explaining when a straight-line model may or may not be appropriate. I exercised the main skills from the module by running the examples, modifying code safely, updating documentation, committing changes, and pushing the finished work to GitHub. In the future, I could apply these same skills to education data, attendance data, student performance data, or other real-world datasets that require prediction and careful interpretation.
